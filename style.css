@@ -1,0 +1,488 @@
+/* 1. Colour variables and global settings */
+:root {
+    --navy: #102744;
+    --white: #FFFFFF;
+    --light-grey: #F2F4F7;
+    --dark-text: #202936;
+    --secondary-text: #526071;
+    --border: #DCE2E9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--dark-text);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+}
+
+h1, .section-title {
+    font-family: "Playfair Display", serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--navy);
+    outline-offset: 4px;
+}
+
+/* 2. Navigation bar */
+.site-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    max-width: 1160px;
+    margin: auto;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    color: var(--navy);
+    font-weight: 700;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.nav-link {
+    color: var(--dark-text);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--navy);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+/* 3. Hero section */
+#hero {
+    background: var(--navy);
+    color: var(--white);
+    padding: 100px 32px 88px;
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.hero-label,
+.item-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.hero-label {
+    color: #DCE6F2;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(44px, 7vw, 68px);
+    margin-bottom: 16px;
+}
+
+.hero h2 {
+    font-size: clamp(18px, 3vw, 25px);
+    font-weight: 500;
+    color: #DCE6F2;
+    margin-bottom: 24px;
+}
+
+.hero-description {
+    max-width: 680px;
+    color: #F0F3F7;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.hero-meta {
+    color: #DCE6F2;
+    font-size: 13px;
+    margin-top: 28px;
+}
+
+/* 4. Buttons */
+.button {
+    min-height: 48px;
+    padding: 12px 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid var(--navy);
+    border-radius: 3px;
+}
+
+.button-light {
+    color: var(--navy);
+    background: var(--white);
+    border-color: var(--white);
+}
+
+.button-dark {
+    color: var(--white);
+    background: var(--navy);
+}
+
+.button-outline {
+    color: var(--navy);
+    background: var(--white);
+}
+
+.button:hover {
+    background: var(--light-grey);
+    color: var(--navy);
+}
+
+/* 5. General sections */
+.section {
+    padding: 76px 32px;
+}
+
+.section-grey {
+    background: var(--light-grey);
+}
+
+.section-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section-title {
+    color: var(--navy);
+    font-size: 34px;
+    margin-bottom: 28px;
+}
+
+.section-description {
+    max-width: 680px;
+    font-size: 15px;
+    color: var(--secondary-text);
+    margin-bottom: 18px;
+}
+
+/* 6. Education section */
+.education-item {
+    max-width: 700px;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+}
+
+.item-label {
+    color: var(--secondary-text);
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.education-item h3 {
+    color: var(--navy);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.education-degree {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+/* 7. Skills section */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 32px;
+    margin-top: 28px;
+}
+
+.skill-item {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 8. Areas of interest */
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 36px;
+}
+
+.interest-card {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.interest-card h3 {
+    color: var(--navy);
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.interest-card p {
+    color: var(--secondary-text);
+    font-size: 14px;
+    max-width: 400px;
+}
+
+/* 9. Resume and printable document */
+.resume-section {
+    padding: 64px 24px;
+    background: var(--light-grey);
+}
+
+.resume-download {
+    max-width: 800px;
+    margin: 0 auto 24px;
+}
+
+.resume-sheet {
+    max-width: 800px;
+    min-height: 850px;
+    margin: auto;
+    padding: 48px 54px;
+    background: var(--white);
+    border: 1px solid var(--border);
+}
+
+.resume-header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--navy);
+}
+
+.resume-header h1 {
+    color: var(--navy);
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.resume-header p {
+    font-size: 12px;
+}
+
+.resume-block {
+    margin-top: 25px;
+}
+
+.resume-block h2 {
+    color: var(--navy);
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 7px;
+    margin-bottom: 12px;
+}
+
+.resume-block h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.resume-block p,
+.resume-block li {
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.resume-skills {
+    padding-left: 18px;
+    columns: 2;
+}
+
+.resume-skills li {
+    padding-right: 8px;
+    margin-bottom: 5px;
+    break-inside: avoid;
+}
+
+/* 10. Contact section */
+.contact-section {
+    text-align: center;
+}
+
+.contact-section .section-description {
+    margin: 0 auto 20px;
+}
+
+.contact-email {
+    color: var(--navy);
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.contact-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* 11. Footer */
+.site-footer {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 22px;
+    font-size: 12px;
+}
+
+/* 12. Mobile layout */
+@media (max-width: 700px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 20px;
+    }
+
+    .nav-links {
+        justify-content: flex-start;
+        gap: 12px 18px;
+    }
+
+    #hero {
+        padding: 72px 24px;
+    }
+
+    .section {
+        padding: 56px 24px;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+
+    .skill-grid,
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-section {
+        padding: 40px 14px;
+    }
+
+    .resume-sheet {
+        min-height: 0;
+        padding: 30px 22px;
+    }
+
+    .contact-actions {
+        flex-direction: column;
+    }
+
+    .contact-actions .button {
+        width: 100%;
+    }
+}
+
+/* 13. A4 printing: show only the resume */
+@page {
+    size: A4;
+    margin: 12mm;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #resume,
+    #resume * {
+        visibility: visible;
+    }
+
+    #resume {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        background: white;
+        color: black;
+    }
+
+    #resume .resume-download {
+        display: none;
+    }
+
+    #resume .resume-sheet {
+        width: 100%;
+        max-width: none;
+        min-height: 0;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: white;
+        color: black;
+    }
+
+    #resume .resume-header {
+        border-bottom: 2px solid black;
+    }
+
+    #resume .resume-header h1,
+    #resume .resume-block h2,
+    #resume .resume-block h3 {
+        color: black;
+    }
+
+    #resume .resume-block h2 {
+        border-color: black;
+    }
+
+    #resume .resume-header p,
+    #resume .resume-block p,
+    #resume .resume-block li {
+        color: black;
+    }
+
+    #resume .resume-block {
+        margin-top: 17px;
+    }
+
+    #resume .resume-block p,
+    #resume .resume-block li {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    #resume .resume-header h1 {
+        font-size: 24px;
+    }
+}
